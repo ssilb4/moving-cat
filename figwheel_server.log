@@ -1,0 +1,738 @@
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.711 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.71 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.771 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.698 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.724 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.684 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.684 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 1.156 seconds.[0m
+[36m----  Could not Analyze  src/cljs/reagent_tutorial/core.cljs   line:72  column:1  ----[0m
+
+  [1mUnsupported binding key: :h1[0m
+
+  [36m70[0m  [36m    :item #'item-page))[0m
+  [36m71[0m  [36m[0m
+  [33m72[0m  [1m(defn common-head[0m
+  [0m  [0m  [33m^--- Unsupported binding key: :h1[0m
+  [36m73[0m  [36m  [:h1 "my-several homepage"])[0m
+  [36m74[0m  [36m[0m
+  [36m75[0m  [36m(defn common-nav[0m
+
+[36m----  Analysis Error : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.165 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.762 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:73  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/common-head[0m
+
+  [36m69[0m  [36m    :items #'items-page[0m
+  [36m70[0m  [36m    :item #'item-page))[0m
+  [36m71[0m  [36m[0m
+  [36m72[0m  [36m(defn common-page [][0m
+  [33m73[0m  [1m  [common-head][0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reagent-tutorial.core/common-head[0m
+  [36m74[0m  [36m  [common-nav][0m
+  [36m75[0m  [36m  [common-article "first-menu"][0m
+  [36m76[0m  [36m)[0m
+  [36m77[0m  [36m[0m
+  [36m78[0m  [36m(defn common-head [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:74  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/common-nav[0m
+
+  [36m70[0m  [36m    :item #'item-page))[0m
+  [36m71[0m  [36m[0m
+  [36m72[0m  [36m(defn common-page [][0m
+  [36m73[0m  [36m  [common-head][0m
+  [33m74[0m  [1m  [common-nav][0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reagent-tutorial.core/common-nav[0m
+  [36m75[0m  [36m  [common-article "first-menu"][0m
+  [36m76[0m  [36m)[0m
+  [36m77[0m  [36m[0m
+  [36m78[0m  [36m(defn common-head [][0m
+  [36m79[0m  [36m  [:h1 "my-several homepage"])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:75  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/common-article[0m
+
+  [36m72[0m  [36m(defn common-page [][0m
+  [36m73[0m  [36m  [common-head][0m
+  [36m74[0m  [36m  [common-nav][0m
+  [33m75[0m  [1m  [common-article "first-menu"][0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reagent-tutorial.core/common-article[0m
+  [36m76[0m  [36m)[0m
+  [36m77[0m  [36m[0m
+  [36m78[0m  [36m(defn common-head [][0m
+  [36m79[0m  [36m  [:h1 "my-several homepage"])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.789 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:73  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/common-head[0m
+
+  [36m69[0m  [36m    :items #'items-page[0m
+  [36m70[0m  [36m    :item #'item-page))[0m
+  [36m71[0m  [36m[0m
+  [36m72[0m  [36m(defn common-page [][0m
+  [33m73[0m  [1m  [common-head][0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reagent-tutorial.core/common-head[0m
+  [36m74[0m  [36m  [common-nav][0m
+  [36m75[0m  [36m  [common-article "first-menu"][0m
+  [36m76[0m  [36m)[0m
+  [36m77[0m  [36m[0m
+  [36m78[0m  [36m(defn common-head [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:74  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/common-nav[0m
+
+  [36m70[0m  [36m    :item #'item-page))[0m
+  [36m71[0m  [36m[0m
+  [36m72[0m  [36m(defn common-page [][0m
+  [36m73[0m  [36m  [common-head][0m
+  [33m74[0m  [1m  [common-nav][0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reagent-tutorial.core/common-nav[0m
+  [36m75[0m  [36m  [common-article "first-menu"][0m
+  [36m76[0m  [36m)[0m
+  [36m77[0m  [36m[0m
+  [36m78[0m  [36m(defn common-head [][0m
+  [36m79[0m  [36m  [:h1 "my-several homepage"])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:75  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/common-article[0m
+
+  [36m72[0m  [36m(defn common-page [][0m
+  [36m73[0m  [36m  [common-head][0m
+  [36m74[0m  [36m  [common-nav][0m
+  [33m75[0m  [1m  [common-article "first-menu"][0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reagent-tutorial.core/common-article[0m
+  [36m76[0m  [36m)[0m
+  [36m77[0m  [36m[0m
+  [36m78[0m  [36m(defn common-head [][0m
+  [36m79[0m  [36m  [:h1 "my-several homepage"])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.777 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:73  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/common-head[0m
+
+  [36m69[0m  [36m    :items #'items-page[0m
+  [36m70[0m  [36m    :item #'item-page))[0m
+  [36m71[0m  [36m[0m
+  [36m72[0m  [36m(defn common-page [][0m
+  [33m73[0m  [1m  (common-head)[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reagent-tutorial.core/common-head[0m
+  [36m74[0m  [36m  (common-nav)[0m
+  [36m75[0m  [36m  (common-article "first-menu")[0m
+  [36m76[0m  [36m)[0m
+  [36m77[0m  [36m[0m
+  [36m78[0m  [36m(defn common-head [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:74  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/common-nav[0m
+
+  [36m70[0m  [36m    :item #'item-page))[0m
+  [36m71[0m  [36m[0m
+  [36m72[0m  [36m(defn common-page [][0m
+  [36m73[0m  [36m  (common-head)[0m
+  [33m74[0m  [1m  (common-nav)[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reagent-tutorial.core/common-nav[0m
+  [36m75[0m  [36m  (common-article "first-menu")[0m
+  [36m76[0m  [36m)[0m
+  [36m77[0m  [36m[0m
+  [36m78[0m  [36m(defn common-head [][0m
+  [36m79[0m  [36m  [:h1 "my-several homepage"])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:75  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/common-article[0m
+
+  [36m72[0m  [36m(defn common-page [][0m
+  [36m73[0m  [36m  (common-head)[0m
+  [36m74[0m  [36m  (common-nav)[0m
+  [33m75[0m  [1m  (common-article "first-menu")[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reagent-tutorial.core/common-article[0m
+  [36m76[0m  [36m)[0m
+  [36m77[0m  [36m[0m
+  [36m78[0m  [36m(defn common-head [][0m
+  [36m79[0m  [36m  [:h1 "my-several homepage"])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.735 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.725 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.709 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.719 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.749 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.723 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.704 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.705 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.491 seconds.[0m
+[36m----  Could not Read  src/cljs/reagent_tutorial/core.cljs   line:133 ----[0m
+
+  [1m/home/reagent-tutorial/src/cljs/reagent_tutorial/core.cljs [line 133, col 73] Invalid symbol: https://github.com/reagent-project/reagent-template.[0m
+
+  [36m131[0m  [36m       [:footer[0m
+  [36m132[0m  [36m        [:p "reagent-tutorial was generated by the "[0m
+  [33m133[0m  [1m         [:a {:href "https://github.com/reagent-project/reagent-template"} "Reagent Template"] "."]]])))[0m
+  [0m   [0m  [33m         /home/reagent-tutorial/src/cljs/reagent_tutorial/core.cljs [line 133, col 73] Invalid symbol: https://github.com/reagent-project/reagent-template.[0m
+  [36m134[0m  [36m[0m
+  [36m135[0m  [36m;; -------------------------[0m
+  [36m136[0m  [36m;; Initialize app[0m
+
+[36m----  Reader Error : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:92  column:19  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/page[0m
+
+  [36m88[0m  [36m(defn common-page [][0m
+  [36m89[0m  [36m  [:div[0m
+  [36m90[0m  [36m  [common-head][0m
+  [36m91[0m  [36m  [common-nav][0m
+  [33m92[0m  [1m  [common-article page][0m
+  [0m  [0m  [33m                  ^--- Use of undeclared Var reagent-tutorial.core/page[0m
+  [36m93[0m  [36m  ][0m
+  [36m94[0m  [36m)[0m
+  [36m95[0m  [36m[0m
+  [36m96[0m  [36m(def data [{:author "Pete Hun", :text "This is one comment"}[0m
+  [36m97[0m  [36m           {:author "Jordan Walke", :text "This is *another* comment"}[0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.764 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:84  column:8  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/number[0m
+
+  [36m80[0m  [36m      [:button {:class "menu" :value="Photo"} "photo"]])[0m
+  [36m81[0m  [36m[0m
+  [36m82[0m  [36m(defn common-article [][0m
+  [36m83[0m  [36m  (cond[0m
+  [33m84[0m  [1m    (= number 1) [:div {:id "first-content"} "It is a homepage"][0m
+  [0m  [0m  [33m       ^--- Use of undeclared Var reagent-tutorial.core/number[0m
+  [36m85[0m  [36m    (= number 2) [:div {:id "second-content"} "It is a board"][0m
+  [36m86[0m  [36m    (= number 3) [:div {:id "third-content"} "It is a photo"]))[0m
+  [36m87[0m  [36m[0m
+  [36m88[0m  [36m(defn common-page [][0m
+  [36m89[0m  [36m  [:div[0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:85  column:8  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/number[0m
+
+  [36m82[0m  [36m(defn common-article [][0m
+  [36m83[0m  [36m  (cond[0m
+  [36m84[0m  [36m    (= number 1) [:div {:id "first-content"} "It is a homepage"][0m
+  [33m85[0m  [1m    (= number 2) [:div {:id "second-content"} "It is a board"][0m
+  [0m  [0m  [33m       ^--- Use of undeclared Var reagent-tutorial.core/number[0m
+  [36m86[0m  [36m    (= number 3) [:div {:id "third-content"} "It is a photo"]))[0m
+  [36m87[0m  [36m[0m
+  [36m88[0m  [36m(defn common-page [][0m
+  [36m89[0m  [36m  [:div[0m
+  [36m90[0m  [36m  [common-head][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:86  column:8  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/number[0m
+
+  [36m82[0m  [36m(defn common-article [][0m
+  [36m83[0m  [36m  (cond[0m
+  [36m84[0m  [36m    (= number 1) [:div {:id "first-content"} "It is a homepage"][0m
+  [36m85[0m  [36m    (= number 2) [:div {:id "second-content"} "It is a board"][0m
+  [33m86[0m  [1m    (= number 3) [:div {:id "third-content"} "It is a photo"]))[0m
+  [0m  [0m  [33m       ^--- Use of undeclared Var reagent-tutorial.core/number[0m
+  [36m87[0m  [36m[0m
+  [36m88[0m  [36m(defn common-page [][0m
+  [36m89[0m  [36m  [:div[0m
+  [36m90[0m  [36m  [common-head][0m
+  [36m91[0m  [36m  [common-nav][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.759 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.707 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.704 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.461 seconds.[0m
+[36m----  Could not Analyze  src/cljs/reagent_tutorial/core.cljs   line:83  column:3  ----[0m
+
+  [1mlet requires a vector for its binding[0m
+
+  [36m82[0m  [36m(defn common-article [number][0m
+  [33m83[0m  [1m  (let number .menu.value[0m
+  [0m  [0m  [33m  ^--- let requires a vector for its binding[0m
+  [36m84[0m  [36m  (cond[0m
+  [36m85[0m  [36m    (= number 1) [:div {:id "first-content"} "It is a homepage"][0m
+  [36m86[0m  [36m    (= number 2) [:div {:id "second-content"} "It is a board"][0m
+
+[36m----  Analysis Error : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.698 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.727 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.702 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.752 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.703 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.741 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.725 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.708 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:72  column:16  ----[0m
+
+  [1mNo such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+
+  [36m68[0m  [36m    :about #'about-page[0m
+  [36m69[0m  [36m    :items #'items-page[0m
+  [36m70[0m  [36m    :item #'item-page))[0m
+  [36m71[0m  [36m[0m
+  [33m72[0m  [1m(def page-num (r/atom 1))[0m
+  [0m  [0m  [33m               ^--- No such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+  [36m73[0m  [36m[0m
+  [36m74[0m  [36m(defn common-head [][0m
+  [36m75[0m  [36m  [:h1 "my-several homepage"])[0m
+  [36m76[0m  [36m[0m
+  [36m77[0m  [36m(defn common-nav [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:72  column:16  ----[0m
+
+  [1mUse of undeclared Var r/atom[0m
+
+  [36m68[0m  [36m    :about #'about-page[0m
+  [36m69[0m  [36m    :items #'items-page[0m
+  [36m70[0m  [36m    :item #'item-page))[0m
+  [36m71[0m  [36m[0m
+  [33m72[0m  [1m(def page-num (r/atom 1))[0m
+  [0m  [0m  [33m               ^--- Use of undeclared Var r/atom[0m
+  [36m73[0m  [36m[0m
+  [36m74[0m  [36m(defn common-head [][0m
+  [36m75[0m  [36m  [:h1 "my-several homepage"])[0m
+  [36m76[0m  [36m[0m
+  [36m77[0m  [36m(defn common-nav [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.491 seconds.[0m
+[36m----  Could not Read  src/cljs/reagent_tutorial/core.cljs   line:135 ----[0m
+
+  [1m/home/reagent-tutorial/src/cljs/reagent_tutorial/core.cljs [line 135, col 73] Invalid symbol: https://github.com/reagent-project/reagent-template.[0m
+
+  [36m133[0m  [36m       [:footer[0m
+  [36m134[0m  [36m        [:p "reagent-tutorial was generated by the "[0m
+  [33m135[0m  [1m         [:a {:href "https://github.com/reagent-project/reagent-template"} "Reagent Template"] "."]]])))[0m
+  [0m   [0m  [33m         /home/reagent-tutorial/src/cljs/reagent_tutorial/core.cljs [line 135, col 73] Invalid symbol: https://github.com/reagent-project/reagent-template.[0m
+  [36m136[0m  [36m[0m
+  [36m137[0m  [36m;; -------------------------[0m
+  [36m138[0m  [36m;; Initialize app[0m
+
+[36m----  Reader Error : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:72  column:16  ----[0m
+
+  [1mNo such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+
+  [36m68[0m  [36m    :about #'about-page[0m
+  [36m69[0m  [36m    :items #'items-page[0m
+  [36m70[0m  [36m    :item #'item-page))[0m
+  [36m71[0m  [36m[0m
+  [33m72[0m  [1m(def page-num (r/atom 1))[0m
+  [0m  [0m  [33m               ^--- No such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+  [36m73[0m  [36m[0m
+  [36m74[0m  [36m(defn common-head [][0m
+  [36m75[0m  [36m  [:h1 "my-several homepage"])[0m
+  [36m76[0m  [36m[0m
+  [36m77[0m  [36m(defn common-nav [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:72  column:16  ----[0m
+
+  [1mUse of undeclared Var r/atom[0m
+
+  [36m68[0m  [36m    :about #'about-page[0m
+  [36m69[0m  [36m    :items #'items-page[0m
+  [36m70[0m  [36m    :item #'item-page))[0m
+  [36m71[0m  [36m[0m
+  [33m72[0m  [1m(def page-num (r/atom 1))[0m
+  [0m  [0m  [33m               ^--- Use of undeclared Var r/atom[0m
+  [36m73[0m  [36m[0m
+  [36m74[0m  [36m(defn common-head [][0m
+  [36m75[0m  [36m  [:h1 "my-several homepage"])[0m
+  [36m76[0m  [36m[0m
+  [36m77[0m  [36m(defn common-nav [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.496 seconds.[0m
+[36m----  Could not Read  src/cljs/reagent_tutorial/core.cljs   line:80 ----[0m
+
+  [1m/home/reagent-tutorial/src/cljs/reagent_tutorial/core.cljs [line 80, col 85] Unmatched delimiter }.[0m
+
+  [36m78[0m  [36m  [:div[0m
+  [36m79[0m  [36m   [:input {:type "button" :class "menu" :value "1" :on-click #(swap! page-num 1)}][0m
+  [33m80[0m  [1m      [:input {:type "button" :class "menu" :value "2" :on-click #(swap! page-num 2}][0m
+  [0m  [0m  [33m      /home/reagent-tutorial/src/cljs/reagent_tutorial/core.cljs [line 80, col 85] Unmatched delimiter }.[0m
+  [36m81[0m  [36m      [:input {:type "button" :class "menu" :value "3" :on-click #(swap! page-num 3}]])[0m
+  [36m82[0m  [36m[0m
+  [36m83[0m  [36m(defn common-article [][0m
+
+[36m----  Reader Error : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:72  column:16  ----[0m
+
+  [1mNo such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+
+  [36m68[0m  [36m    :about #'about-page[0m
+  [36m69[0m  [36m    :items #'items-page[0m
+  [36m70[0m  [36m    :item #'item-page))[0m
+  [36m71[0m  [36m[0m
+  [33m72[0m  [1m(def page-num (r/atom 1))[0m
+  [0m  [0m  [33m               ^--- No such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+  [36m73[0m  [36m[0m
+  [36m74[0m  [36m(defn common-head [][0m
+  [36m75[0m  [36m  [:h1 "my-several homepage"])[0m
+  [36m76[0m  [36m[0m
+  [36m77[0m  [36m(defn common-nav [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:72  column:16  ----[0m
+
+  [1mUse of undeclared Var r/atom[0m
+
+  [36m68[0m  [36m    :about #'about-page[0m
+  [36m69[0m  [36m    :items #'items-page[0m
+  [36m70[0m  [36m    :item #'item-page))[0m
+  [36m71[0m  [36m[0m
+  [33m72[0m  [1m(def page-num (r/atom 1))[0m
+  [0m  [0m  [33m               ^--- Use of undeclared Var r/atom[0m
+  [36m73[0m  [36m[0m
+  [36m74[0m  [36m(defn common-head [][0m
+  [36m75[0m  [36m  [:h1 "my-several homepage"])[0m
+  [36m76[0m  [36m[0m
+  [36m77[0m  [36m(defn common-nav [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.727 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.694 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.701 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.705 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.7 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.698 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:79  column:80  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/def[0m
+
+  [36m75[0m  [36m  [:h1 "my-several homepage"])[0m
+  [36m76[0m  [36m[0m
+  [36m77[0m  [36m(defn common-nav [][0m
+  [36m78[0m  [36m  [:div[0m
+  [33m79[0m  [1m   [:input {:type "button" :class "menu" :value "1" :on-click #(swap! page-num def 1)}][0m
+  [0m  [0m  [33m                                                                               ^--- Use of undeclared Var reagent-tutorial.core/def[0m
+  [36m80[0m  [36m      [:input {:type "button" :class "menu" :value "2" :on-click #(swap! page-num def 2)}][0m
+  [36m81[0m  [36m      [:input {:type "button" :class "menu" :value "3" :on-click #(swap! page-num def 3)}]])[0m
+  [36m82[0m  [36m[0m
+  [36m83[0m  [36m(defn common-article [page-num][0m
+  [36m84[0m  [36m  (let [number page-num][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:80  column:83  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/def[0m
+
+  [36m77[0m  [36m(defn common-nav [][0m
+  [36m78[0m  [36m  [:div[0m
+  [36m79[0m  [36m   [:input {:type "button" :class "menu" :value "1" :on-click #(swap! page-num def 1)}][0m
+  [33m80[0m  [1m      [:input {:type "button" :class "menu" :value "2" :on-click #(swap! page-num def 2)}][0m
+  [0m  [0m  [33m                                                                                  ^--- Use of undeclared Var reagent-tutorial.core/def[0m
+  [36m81[0m  [36m      [:input {:type "button" :class "menu" :value "3" :on-click #(swap! page-num def 3)}]])[0m
+  [36m82[0m  [36m[0m
+  [36m83[0m  [36m(defn common-article [page-num][0m
+  [36m84[0m  [36m  (let [number page-num][0m
+  [36m85[0m  [36m  (cond[0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:81  column:83  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/def[0m
+
+  [36m77[0m  [36m(defn common-nav [][0m
+  [36m78[0m  [36m  [:div[0m
+  [36m79[0m  [36m   [:input {:type "button" :class "menu" :value "1" :on-click #(swap! page-num def 1)}][0m
+  [36m80[0m  [36m      [:input {:type "button" :class "menu" :value "2" :on-click #(swap! page-num def 2)}][0m
+  [33m81[0m  [1m      [:input {:type "button" :class "menu" :value "3" :on-click #(swap! page-num def 3)}]])[0m
+  [0m  [0m  [33m                                                                                  ^--- Use of undeclared Var reagent-tutorial.core/def[0m
+  [36m82[0m  [36m[0m
+  [36m83[0m  [36m(defn common-article [page-num][0m
+  [36m84[0m  [36m  (let [number page-num][0m
+  [36m85[0m  [36m  (cond[0m
+  [36m86[0m  [36m    (= number 1) [:div {:id "first-content"} "It is a homepage"][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.739 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:79  column:80  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/def[0m
+
+  [36m75[0m  [36m  [:h1 "my-several homepage"])[0m
+  [36m76[0m  [36m[0m
+  [36m77[0m  [36m(defn common-nav [][0m
+  [36m78[0m  [36m  [:div[0m
+  [33m79[0m  [1m   [:input {:type "button" :class "menu" :value "1" :on-click #(swap! page-num def 1)}][0m
+  [0m  [0m  [33m                                                                               ^--- Use of undeclared Var reagent-tutorial.core/def[0m
+  [36m80[0m  [36m      [:input {:type "button" :class "menu" :value "2" :on-click #(swap! page-num def 2)}][0m
+  [36m81[0m  [36m      [:input {:type "button" :class "menu" :value "3" :on-click #(swap! page-num def 3)}]])[0m
+  [36m82[0m  [36m[0m
+  [36m83[0m  [36m(defn common-article [page-num][0m
+  [36m84[0m  [36m  (let [number page-num][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:80  column:83  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/def[0m
+
+  [36m77[0m  [36m(defn common-nav [][0m
+  [36m78[0m  [36m  [:div[0m
+  [36m79[0m  [36m   [:input {:type "button" :class "menu" :value "1" :on-click #(swap! page-num def 1)}][0m
+  [33m80[0m  [1m      [:input {:type "button" :class "menu" :value "2" :on-click #(swap! page-num def 2)}][0m
+  [0m  [0m  [33m                                                                                  ^--- Use of undeclared Var reagent-tutorial.core/def[0m
+  [36m81[0m  [36m      [:input {:type "button" :class "menu" :value "3" :on-click #(swap! page-num def 3)}]])[0m
+  [36m82[0m  [36m[0m
+  [36m83[0m  [36m(defn common-article [page-num][0m
+  [36m84[0m  [36m  (let [number page-num][0m
+  [36m85[0m  [36m  (cond[0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:81  column:83  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/def[0m
+
+  [36m77[0m  [36m(defn common-nav [][0m
+  [36m78[0m  [36m  [:div[0m
+  [36m79[0m  [36m   [:input {:type "button" :class "menu" :value "1" :on-click #(swap! page-num def 1)}][0m
+  [36m80[0m  [36m      [:input {:type "button" :class "menu" :value "2" :on-click #(swap! page-num def 2)}][0m
+  [33m81[0m  [1m      [:input {:type "button" :class "menu" :value "3" :on-click #(swap! page-num def 3)}]])[0m
+  [0m  [0m  [33m                                                                                  ^--- Use of undeclared Var reagent-tutorial.core/def[0m
+  [36m82[0m  [36m[0m
+  [36m83[0m  [36m(defn common-article [page-num][0m
+  [36m84[0m  [36m  (let [number page-num][0m
+  [36m85[0m  [36m  (cond[0m
+  [36m86[0m  [36m    (= number 1) [:div {:id "first-content"} "It is a homepage"][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.751 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:79  column:80  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/reset[0m
+
+  [36m75[0m  [36m  [:h1 "my-several homepage"])[0m
+  [36m76[0m  [36m[0m
+  [36m77[0m  [36m(defn common-nav [][0m
+  [36m78[0m  [36m  [:div[0m
+  [33m79[0m  [1m   [:input {:type "button" :class "menu" :value "1" :on-click #(swap! page-num reset 1)}][0m
+  [0m  [0m  [33m                                                                               ^--- Use of undeclared Var reagent-tutorial.core/reset[0m
+  [36m80[0m  [36m      [:input {:type "button" :class "menu" :value "2" :on-click #(swap! page-num reset 2)}][0m
+  [36m81[0m  [36m      [:input {:type "button" :class "menu" :value "3" :on-click #(swap! page-num reset 3)}]])[0m
+  [36m82[0m  [36m[0m
+  [36m83[0m  [36m(defn common-article [page-num][0m
+  [36m84[0m  [36m  (let [number page-num][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:80  column:83  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/reset[0m
+
+  [36m77[0m  [36m(defn common-nav [][0m
+  [36m78[0m  [36m  [:div[0m
+  [36m79[0m  [36m   [:input {:type "button" :class "menu" :value "1" :on-click #(swap! page-num reset 1)}][0m
+  [33m80[0m  [1m      [:input {:type "button" :class "menu" :value "2" :on-click #(swap! page-num reset 2)}][0m
+  [0m  [0m  [33m                                                                                  ^--- Use of undeclared Var reagent-tutorial.core/reset[0m
+  [36m81[0m  [36m      [:input {:type "button" :class "menu" :value "3" :on-click #(swap! page-num reset 3)}]])[0m
+  [36m82[0m  [36m[0m
+  [36m83[0m  [36m(defn common-article [page-num][0m
+  [36m84[0m  [36m  (let [number page-num][0m
+  [36m85[0m  [36m  (cond[0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:81  column:83  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/reset[0m
+
+  [36m77[0m  [36m(defn common-nav [][0m
+  [36m78[0m  [36m  [:div[0m
+  [36m79[0m  [36m   [:input {:type "button" :class "menu" :value "1" :on-click #(swap! page-num reset 1)}][0m
+  [36m80[0m  [36m      [:input {:type "button" :class "menu" :value "2" :on-click #(swap! page-num reset 2)}][0m
+  [33m81[0m  [1m      [:input {:type "button" :class "menu" :value "3" :on-click #(swap! page-num reset 3)}]])[0m
+  [0m  [0m  [33m                                                                                  ^--- Use of undeclared Var reagent-tutorial.core/reset[0m
+  [36m82[0m  [36m[0m
+  [36m83[0m  [36m(defn common-article [page-num][0m
+  [36m84[0m  [36m  (let [number page-num][0m
+  [36m85[0m  [36m  (cond[0m
+  [36m86[0m  [36m    (= number 1) [:div {:id "first-content"} "It is a homepage"][0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.752 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.726 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.706 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.688 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.696 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.698 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.713 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.715 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.701 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.698 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:97  column:2  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/mount-root[0m
+
+  [36m 93[0m  [36m  [common-article][0m
+  [36m 94[0m  [36m  ][0m
+  [36m 95[0m  [36m)[0m
+  [36m 96[0m  [36m[0m
+  [33m 97[0m  [1m(mount-root [][0m
+  [0m   [0m  [33m ^--- Use of undeclared Var reagent-tutorial.core/mount-root[0m
+  [36m 98[0m  [36m  (reagent/render [common-page] (.getElementById js/document "app")))[0m
+  [36m 99[0m  [36m[0m
+  [36m100[0m  [36m(defn init! [][0m
+  [36m101[0m  [36m  (clerk/initialize!)[0m
+  [36m102[0m  [36m  (accountant/configure-navigation![0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/reagent_tutorial/core.cljs   line:117  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent-tutorial.core/mount-root[0m
+
+  [36m113[0m  [36m  :path-exists?[0m
+  [36m114[0m  [36m  (fn [path][0m
+  [36m115[0m  [36m    (boolean (reitit/match-by-path router path)))})[0m
+  [36m116[0m  [36m(accountant/dispatch-current!)[0m
+  [33m117[0m  [1m(mount-root))[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var reagent-tutorial.core/mount-root[0m
+
+[36m----  Compiler Warning : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.732 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.678 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.673 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.66 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.662 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.665 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
