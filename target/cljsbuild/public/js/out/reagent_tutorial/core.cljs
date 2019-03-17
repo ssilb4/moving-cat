@@ -1,17 +1,17 @@
 (ns reagent-tutorial.core
-    (:require [reagent.core :as reagent :refer [atom]]
-              [reagent.session :as session]
-              [reitit.frontend :as reitit]
-              [clerk.core :as clerk]
-              [accountant.core :as accountant]))
+  (:require [reagent.core :as reagent :refer [atom]]
+            [reagent.session :as session]
+            [reitit.frontend :as reitit]
+            [clerk.core :as clerk]
+            [accountant.core :as accountant]))
 
 (def page-num (reagent/atom 1))
 
-(def x-coordinate (reagent/atom 0))
-(def y-coordinate (reagent/atom 0))
+(def coordinate (reagent/atom {:x 300 :y 300}))
+;(def y-coordinate (reagent/atom {:value 20}))
 
 (defn common-head []
-  [:h1 "my-several homepage"])
+  [:h1 "Moving Cat"])
 
 (defn common-nav []
   [:div
@@ -26,30 +26,51 @@
     (= @page-num 3) [:div {:id "third-content"} "It is a photo"]))
 
 (defn common-footer []
-  [:footer {:class "footer"} "made by ssilb4"])
+  [:footer {:class "footer"} 
+   [:p "This site was created by ssilb4 using cljs (reagent)."]
+   ])
+
+(defn readMe []
+  [:div
+   [:p "You can move the cat. If you press arrowkey or w,a,s,d, the cat moves."]
+   [:p "below input is for mobile user."] 
+   ])
 
 (defn keytest []
-  [:input
-   {:on-key-press
+  [:input#mobileInput
+   {:on-key-up
     (fn [e]
-      (println "key press" (.-key e))
-      (if (= (.-key e) 13)
-        (println "Enter")
-        (println "Not Enter")))}
-   ]
-)
+      (moving (last (.-value (.-target e))))
+      (set! (.-value (js/document.getElementById "mobileInput")) "")
+      )
+}])
 
-(defn myHero [x y]
+(defn myHero []
   [:img.hero
-   {:src "https://cdn.pixabay.com/photo/2017/09/01/00/15/png-2702691_960_720.png"
-    :style {:top (str x "px") :left (str y "px")}}])
+   {:src "https://t1.daumcdn.net/cfile/tistory/99E2063F5C89011921"
+    :style {:top (str (get @coordinate :y) "px") :left (str (get @coordinate :x) "px")}}])
 
 (defn moving [e]
-  (cond 
-    (= (.-key e) "ArrowUp") (println "I am UP")
-    (= (.-key e) "ArrowDown") (do #(reset! x-coordinate 10) (println @x-coordinate))
-    (= (.-key e) "ArrowLeft") (println "I am LEFT")
-    (= (.-key e) "ArrowRight") #(swap! y-coordinate update-in inc)
+  (println e)
+  (cond
+    (= (.-key e) "ArrowUp") (swap! coordinate update-in [:y] dec)
+    (= (.-key e) "ArrowDown") (swap! coordinate update-in [:y] inc)
+    (= (.-key e) "ArrowLeft") (swap! coordinate update-in [:x] dec)
+    (= (.-key e) "ArrowRight") (swap! coordinate update-in [:x] inc)
+    (= (.-key e) "w") (swap! coordinate update-in [:y] dec)
+    (= (.-key e) "s") (swap! coordinate update-in [:y] inc)
+    (= (.-key e) "a") (swap! coordinate update-in [:x] dec)
+    (= (.-key e) "d") (swap! coordinate update-in [:x] inc)
+    (= e "w") (swap! coordinate update-in [:y] dec)
+    (= e "s") (swap! coordinate update-in [:y] inc)
+    (= e "a") (swap! coordinate update-in [:x] dec)
+    (= e "d") (swap! coordinate update-in [:x] inc)
+    ;(= (.-keyCode e) 229) (swap! coordinate update-in [:y] dec)
+    ;:else (.alert js/window (.-key e))
+    ;:else (.alert js/window (.fromCharCode js/String (.-key e)))))
+    ;:else (println (.fromCharCode js/String (.-keyCode e)))
+    ;:else (.alert js/window (.-which e))
+    ;(= (.fromCharCode js/String (.-keyCode e)) "W") (swap! coordinate update-in [:y] dec)
     ))
 
 ; (defn common-page [x y]
@@ -63,25 +84,38 @@
 ;    ]
 ;   )
 
-(defn common-page [x y]
-  (let [component-state (reagent/atom {:count y})]
-    (fn []
+(defn mobileMoving [e]
+  ; (let [_char (.data e)]
+  ;   (.alert js/window (.charCodeAt _char (int 0)))
+  ;   )
+  )
+
+(defn addEvent []
+  ;(do
+  (.addEventListener js/window "keydown" (fn [e] (moving e)))
+    ;(.addEventListener #test "textInput" (fn [e] (mobileMoving e)))
+  ;)
+  )
+
+(defn common-page []
+  (fn []
     [:div
      [common-head]
      [common-nav]
      [common-article]
+     [readMe]
      [keytest]
-     [:button {:on-click #(swap! component-state update-in [:count] inc)} "Increment"]
-     [myHero (get @component-state :count) y]
-     [common-footer]])))
+       ;[:button {:on-click #(swap! coordinate update-in [:y] inc)} "Increment"]
+     [myHero]
+       ;[:button {:on-click #(println (get @coordinate :x) (get @coordinate :y))} "Print"]
+     [common-footer]
+     [:div (addEvent)]]))
 
 (defn mount-root []
-  (reagent/render [common-page @x-coordinate @y-coordinate] 
-                  (.getElementById js/document "app"))
-  (.addEventListener js/window "keyup" (fn [e] (moving e))))
+  (reagent/render [common-page]
+                  (.getElementById js/document "app")))
 
 
 (defn init! []
   (clerk/initialize!)
-  (mount-root)
-  )
+  (mount-root))
