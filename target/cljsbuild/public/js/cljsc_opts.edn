@@ -1,0 +1,1 @@
+{:output-wrapper true, :externs ["closure-js/externs"], :libs ["closure-js/libs"], :output-to "target/cljsbuild/public/js/app.js", :output-dir "target/cljsbuild/public/js", :source-map "target/cljsbuild/public/js/app.js.map", :optimizations :advanced, :pretty-print false}
