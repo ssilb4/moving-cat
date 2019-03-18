@@ -83,6 +83,7 @@
     (= e "s") (swap! coordinate update-in [:y] inc)
     (= e "a") (swap! coordinate update-in [:x] dec)
     (= e "d") (swap! coordinate update-in [:x] inc)
+    (= e "c") (capture)
     ;:else (.alert js/window (.-key e))
     ;:else (.alert js/window (.-which e))
     ))
