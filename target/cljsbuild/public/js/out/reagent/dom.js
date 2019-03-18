@@ -23,15 +23,15 @@ cljs.core.swap_BANG_.call(null,reagent.dom.roots,cljs.core.dissoc,container);
 return reagent.dom.global$module$react_dom.unmountComponentAtNode.call(null,container);
 });
 reagent.dom.render_comp = (function reagent$dom$render_comp(comp,container,callback){
-var _STAR_always_update_STAR__orig_val__33967 = reagent.impl.util._STAR_always_update_STAR_;
-var _STAR_always_update_STAR__temp_val__33968 = true;
-reagent.impl.util._STAR_always_update_STAR_ = _STAR_always_update_STAR__temp_val__33968;
+var _STAR_always_update_STAR__orig_val__38601 = reagent.impl.util._STAR_always_update_STAR_;
+var _STAR_always_update_STAR__temp_val__38602 = true;
+reagent.impl.util._STAR_always_update_STAR_ = _STAR_always_update_STAR__temp_val__38602;
 
-try{return reagent.dom.global$module$react_dom.render.call(null,comp.call(null),container,((function (_STAR_always_update_STAR__orig_val__33967,_STAR_always_update_STAR__temp_val__33968){
+try{return reagent.dom.global$module$react_dom.render.call(null,comp.call(null),container,((function (_STAR_always_update_STAR__orig_val__38601,_STAR_always_update_STAR__temp_val__38602){
 return (function (){
-var _STAR_always_update_STAR__orig_val__33969 = reagent.impl.util._STAR_always_update_STAR_;
-var _STAR_always_update_STAR__temp_val__33970 = false;
-reagent.impl.util._STAR_always_update_STAR_ = _STAR_always_update_STAR__temp_val__33970;
+var _STAR_always_update_STAR__orig_val__38603 = reagent.impl.util._STAR_always_update_STAR_;
+var _STAR_always_update_STAR__temp_val__38604 = false;
+reagent.impl.util._STAR_always_update_STAR_ = _STAR_always_update_STAR__temp_val__38604;
 
 try{cljs.core.swap_BANG_.call(null,reagent.dom.roots,cljs.core.assoc,container,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [comp,container], null));
 
@@ -42,10 +42,10 @@ return callback.call(null);
 } else {
 return null;
 }
-}finally {reagent.impl.util._STAR_always_update_STAR_ = _STAR_always_update_STAR__orig_val__33969;
-}});})(_STAR_always_update_STAR__orig_val__33967,_STAR_always_update_STAR__temp_val__33968))
+}finally {reagent.impl.util._STAR_always_update_STAR_ = _STAR_always_update_STAR__orig_val__38603;
+}});})(_STAR_always_update_STAR__orig_val__38601,_STAR_always_update_STAR__temp_val__38602))
 );
-}finally {reagent.impl.util._STAR_always_update_STAR_ = _STAR_always_update_STAR__orig_val__33967;
+}finally {reagent.impl.util._STAR_always_update_STAR_ = _STAR_always_update_STAR__orig_val__38601;
 }});
 reagent.dom.re_render_component = (function reagent$dom$re_render_component(comp,container){
 return reagent.dom.render_comp.call(null,comp,container,null);
@@ -59,8 +59,8 @@ return reagent.dom.render_comp.call(null,comp,container,null);
  *   Returns the mounted component instance.
  */
 reagent.dom.render = (function reagent$dom$render(var_args){
-var G__33972 = arguments.length;
-switch (G__33972) {
+var G__38606 = arguments.length;
+switch (G__38606) {
 case 2:
 return reagent.dom.render.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -114,53 +114,53 @@ reagent.impl.template.find_dom_node = reagent.dom.dom_node;
 reagent.dom.force_update_all = (function reagent$dom$force_update_all(){
 reagent.ratom.flush_BANG_.call(null);
 
-var seq__33974_33978 = cljs.core.seq.call(null,cljs.core.vals.call(null,cljs.core.deref.call(null,reagent.dom.roots)));
-var chunk__33975_33979 = null;
-var count__33976_33980 = (0);
-var i__33977_33981 = (0);
+var seq__38608_38612 = cljs.core.seq.call(null,cljs.core.vals.call(null,cljs.core.deref.call(null,reagent.dom.roots)));
+var chunk__38609_38613 = null;
+var count__38610_38614 = (0);
+var i__38611_38615 = (0);
 while(true){
-if((i__33977_33981 < count__33976_33980)){
-var v_33982 = cljs.core._nth.call(null,chunk__33975_33979,i__33977_33981);
-cljs.core.apply.call(null,reagent.dom.re_render_component,v_33982);
+if((i__38611_38615 < count__38610_38614)){
+var v_38616 = cljs.core._nth.call(null,chunk__38609_38613,i__38611_38615);
+cljs.core.apply.call(null,reagent.dom.re_render_component,v_38616);
 
 
-var G__33983 = seq__33974_33978;
-var G__33984 = chunk__33975_33979;
-var G__33985 = count__33976_33980;
-var G__33986 = (i__33977_33981 + (1));
-seq__33974_33978 = G__33983;
-chunk__33975_33979 = G__33984;
-count__33976_33980 = G__33985;
-i__33977_33981 = G__33986;
+var G__38617 = seq__38608_38612;
+var G__38618 = chunk__38609_38613;
+var G__38619 = count__38610_38614;
+var G__38620 = (i__38611_38615 + (1));
+seq__38608_38612 = G__38617;
+chunk__38609_38613 = G__38618;
+count__38610_38614 = G__38619;
+i__38611_38615 = G__38620;
 continue;
 } else {
-var temp__5720__auto___33987 = cljs.core.seq.call(null,seq__33974_33978);
-if(temp__5720__auto___33987){
-var seq__33974_33988__$1 = temp__5720__auto___33987;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__33974_33988__$1)){
-var c__4461__auto___33989 = cljs.core.chunk_first.call(null,seq__33974_33988__$1);
-var G__33990 = cljs.core.chunk_rest.call(null,seq__33974_33988__$1);
-var G__33991 = c__4461__auto___33989;
-var G__33992 = cljs.core.count.call(null,c__4461__auto___33989);
-var G__33993 = (0);
-seq__33974_33978 = G__33990;
-chunk__33975_33979 = G__33991;
-count__33976_33980 = G__33992;
-i__33977_33981 = G__33993;
+var temp__5720__auto___38621 = cljs.core.seq.call(null,seq__38608_38612);
+if(temp__5720__auto___38621){
+var seq__38608_38622__$1 = temp__5720__auto___38621;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__38608_38622__$1)){
+var c__4461__auto___38623 = cljs.core.chunk_first.call(null,seq__38608_38622__$1);
+var G__38624 = cljs.core.chunk_rest.call(null,seq__38608_38622__$1);
+var G__38625 = c__4461__auto___38623;
+var G__38626 = cljs.core.count.call(null,c__4461__auto___38623);
+var G__38627 = (0);
+seq__38608_38612 = G__38624;
+chunk__38609_38613 = G__38625;
+count__38610_38614 = G__38626;
+i__38611_38615 = G__38627;
 continue;
 } else {
-var v_33994 = cljs.core.first.call(null,seq__33974_33988__$1);
-cljs.core.apply.call(null,reagent.dom.re_render_component,v_33994);
+var v_38628 = cljs.core.first.call(null,seq__38608_38622__$1);
+cljs.core.apply.call(null,reagent.dom.re_render_component,v_38628);
 
 
-var G__33995 = cljs.core.next.call(null,seq__33974_33988__$1);
-var G__33996 = null;
-var G__33997 = (0);
-var G__33998 = (0);
-seq__33974_33978 = G__33995;
-chunk__33975_33979 = G__33996;
-count__33976_33980 = G__33997;
-i__33977_33981 = G__33998;
+var G__38629 = cljs.core.next.call(null,seq__38608_38622__$1);
+var G__38630 = null;
+var G__38631 = (0);
+var G__38632 = (0);
+seq__38608_38612 = G__38629;
+chunk__38609_38613 = G__38630;
+count__38610_38614 = G__38631;
+i__38611_38615 = G__38632;
 continue;
 }
 } else {
@@ -172,4 +172,4 @@ break;
 return "Updated";
 });
 
-//# sourceMappingURL=dom.js.map?rel=1552709046259
+//# sourceMappingURL=dom.js.map?rel=1552827702461
