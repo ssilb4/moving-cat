@@ -12,8 +12,8 @@ goog.require('goog.Uri');
 reitit.frontend.query_params = (function reitit$frontend$query_params(uri){
 var q = uri.getQueryData();
 return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.juxt.cljs$core$IFn$_invoke$arity$2(cljs.core.keyword,((function (q){
-return (function (p1__30637_SHARP_){
-return q.get(p1__30637_SHARP_);
+return (function (p1__33877_SHARP_){
+return q.get(p1__33877_SHARP_);
 });})(q))
 ),q.getKeys()));
 });
@@ -46,8 +46,8 @@ return null;
  *   or `nil` (no match).
  */
 reitit.frontend.match_by_name = (function reitit$frontend$match_by_name(var_args){
-var G__30639 = arguments.length;
-switch (G__30639) {
+var G__33879 = arguments.length;
+switch (G__33879) {
 case 2:
 return reitit.frontend.match_by_name.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -77,8 +77,8 @@ reitit.frontend.match_by_name.cljs$lang$maxFixedArity = 3;
  *   Enables request coercion. See [[reitit.core/router]] for details on options.
  */
 reitit.frontend.router = (function reitit$frontend$router(var_args){
-var G__30642 = arguments.length;
-switch (G__30642) {
+var G__33882 = arguments.length;
+switch (G__33882) {
 case 1:
 return reitit.frontend.router.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -107,8 +107,8 @@ reitit.frontend.router.cljs$lang$maxFixedArity = 2;
  * Logs problems using console.warn
  */
 reitit.frontend.match_by_name_BANG_ = (function reitit$frontend$match_by_name_BANG_(var_args){
-var G__30646 = arguments.length;
-switch (G__30646) {
+var G__33886 = arguments.length;
+switch (G__33886) {
 case 2:
 return reitit.frontend.match_by_name_BANG_.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -133,8 +133,8 @@ if(cljs.core.truth_(temp__5718__auto__)){
 var match = temp__5718__auto__;
 if(reitit.core.partial_match_QMARK_(match)){
 if(cljs.core.every_QMARK_(((function (match,temp__5718__auto__){
-return (function (p1__30644_SHARP_){
-return cljs.core.contains_QMARK_(path_params,p1__30644_SHARP_);
+return (function (p1__33884_SHARP_){
+return cljs.core.contains_QMARK_(path_params,p1__33884_SHARP_);
 });})(match,temp__5718__auto__))
 ,cljs.core.cst$kw$required.cljs$core$IFn$_invoke$arity$1(match))){
 return match;
