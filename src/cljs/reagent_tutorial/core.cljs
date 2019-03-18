@@ -7,38 +7,91 @@
 
 (def page-num (reagent/atom 1))
 
-(def coordinate (reagent/atom {:x 300 :y 300}))
-;(def y-coordinate (reagent/atom {:value 20}))
+(def coordinate (reagent/atom {:x 50 :y 300}))
+(def fish-coordinate (reagent/atom {:x (rand-int 500) :y (rand-int 500) :status 1}))
 
 (defn common-head []
   [:h1 "Moving Cat"])
 
 (defn common-nav []
   [:div
-   [:input {:type "button" :class "menu" :value "Home" :on-click #(reset! page-num 1)}]
-   [:input {:type "button" :class "menu" :value "Board" :on-click #(reset! page-num 2)}]
-   [:input {:type "button" :class "menu" :value "Photo" :on-click #(reset! page-num 3)}]])
+   [:input {:type "button" :class "menu" :value "Read Me" :on-click (if (= @page-num 1) #(reset! page-num 2) #(reset! page-num 1))}]])
+
+(defn readMe []
+  [:div
+   [:p "You can move the cat. If you press arrowkey or w,a,s,d, the cat moves."]
+   [:p "and If you press c, the cat eat the fish."]
+   [:p "below input is for mobile users."] 
+   ])
 
 (defn common-article []
   (cond
-    (= @page-num 1) [:div {:id "first-content"} "It is a homepage"]
-    (= @page-num 2) [:div {:id "second-content"} "It is a board"]
-    (= @page-num 3) [:div {:id "third-content"} "It is a photo"]))
+    (= @page-num 1) [:div {:id "unvisible-readme"} [:br]]
+    (= @page-num 2) [:div {:id "visible-readme"} (readMe)]
+    ))
 
 (defn common-footer []
   [:footer {:class "footer"} 
    [:p "This site was created by ssilb4 using cljs (reagent)."]
    ])
 
-(defn readMe []
-  [:div
-   [:p "You can move the cat. If you press arrowkey or w,a,s,d, the cat moves."]
-   [:p "below input is for mobile user."] 
-   ])
+(defn myFish []
+  (if (= (get @fish-coordinate :status) 1)  
+  [:img.fish
+   {:src "https://t1.daumcdn.net/cfile/tistory/991804435C8F940A2D"
+    :style {:position "absolute" :width "100px" :height "100px" :top (str (get @fish-coordinate :y) "px") :left (str (get @fish-coordinate :x) "px")}}]
+  
+  ;(if (= (get @fish-coordinate :status) 2)
+  [:img.fish
+   {:src "https://t1.daumcdn.net/cfile/tistory/99BAA2405C8F940A27"
+    :style {:position "absolute" :width "100px" :height "100px" :top (str (get @fish-coordinate :y) "px") :left (str (get @fish-coordinate :x) "px")}}])
+  )
+
+(defn newFish []
+  (swap! fish-coordinate assoc :status 1)
+  (swap! fish-coordinate assoc :x (rand-int 500))
+  (swap! fish-coordinate assoc :y (rand-int 500)))
+
+(defn capture []
+  (let [hx (+ (get @coordinate :x) 150)
+        hy (+ (get @coordinate :y) 60)
+        cx (+ (get @fish-coordinate :x) 20)
+        cy (+ (get @fish-coordinate :y) 20)]
+    (if (and (> 40 (- hx cx)) (< -5 (- hx cx)) (> 20 (- hy cy)) (< -20 (- hy cy)))
+  (if (= (get @fish-coordinate :status) 1)
+    (do
+      (swap! fish-coordinate assoc :status 2)
+      (js/setTimeout #(newFish) 1000))
+   (str "test")                     ;(swap! fish-coordinate assoc :status 1)
+   )
+  (println hx hy cx cy )))
+)
+
+(defn moving [e]
+  (println (.-key e))
+  (cond
+    (= (.-key e) "ArrowUp") (swap! coordinate update-in [:y] dec)
+    (= (.-key e) "ArrowDown") (swap! coordinate update-in [:y] inc)
+    (= (.-key e) "ArrowLeft") (swap! coordinate update-in [:x] dec)
+    (= (.-key e) "ArrowRight") (swap! coordinate update-in [:x] inc)
+    (= (.-key e) "w") (swap! coordinate update-in [:y] dec)
+    (= (.-key e) "s") (swap! coordinate update-in [:y] inc)
+    (= (.-key e) "a") (swap! coordinate update-in [:x] dec)
+    (= (.-key e) "d") (swap! coordinate update-in [:x] inc)
+    (= (.-key e) "c") (capture)
+    (= e "w") (swap! coordinate update-in [:y] dec)
+    (= e "s") (swap! coordinate update-in [:y] inc)
+    (= e "a") (swap! coordinate update-in [:x] dec)
+    (= e "d") (swap! coordinate update-in [:x] inc)
+    ;:else (.alert js/window (.-key e))
+    ;:else (.alert js/window (.-which e))
+    ))
 
 (defn keytest []
   [:input#mobileInput
-   {:on-key-up
+   {:placeholder "It is for mobile user."
+
+    :on-key-up
     (fn [e]
       (moving (last (.-value (.-target e))))
       (set! (.-value (js/document.getElementById "mobileInput")) "")
@@ -50,51 +103,10 @@
    {:src "https://t1.daumcdn.net/cfile/tistory/99E2063F5C89011921"
     :style {:top (str (get @coordinate :y) "px") :left (str (get @coordinate :x) "px")}}])
 
-(defn moving [e]
-  (println e)
-  (cond
-    (= (.-key e) "ArrowUp") (swap! coordinate update-in [:y] dec)
-    (= (.-key e) "ArrowDown") (swap! coordinate update-in [:y] inc)
-    (= (.-key e) "ArrowLeft") (swap! coordinate update-in [:x] dec)
-    (= (.-key e) "ArrowRight") (swap! coordinate update-in [:x] inc)
-    (= (.-key e) "w") (swap! coordinate update-in [:y] dec)
-    (= (.-key e) "s") (swap! coordinate update-in [:y] inc)
-    (= (.-key e) "a") (swap! coordinate update-in [:x] dec)
-    (= (.-key e) "d") (swap! coordinate update-in [:x] inc)
-    (= e "w") (swap! coordinate update-in [:y] dec)
-    (= e "s") (swap! coordinate update-in [:y] inc)
-    (= e "a") (swap! coordinate update-in [:x] dec)
-    (= e "d") (swap! coordinate update-in [:x] inc)
-    ;(= (.-keyCode e) 229) (swap! coordinate update-in [:y] dec)
-    ;:else (.alert js/window (.-key e))
-    ;:else (.alert js/window (.fromCharCode js/String (.-key e)))))
-    ;:else (println (.fromCharCode js/String (.-keyCode e)))
-    ;:else (.alert js/window (.-which e))
-    ;(= (.fromCharCode js/String (.-keyCode e)) "W") (swap! coordinate update-in [:y] dec)
-    ))
 
-; (defn common-page [x y]
-;   [:div
-;    [common-head]
-;    [common-nav]
-;    [common-article]
-;    [keytest]
-;    [myHero x y]
-;    [common-footer]
-;    ]
-;   )
-
-(defn mobileMoving [e]
-  ; (let [_char (.data e)]
-  ;   (.alert js/window (.charCodeAt _char (int 0)))
-  ;   )
-  )
 
 (defn addEvent []
-  ;(do
   (.addEventListener js/window "keydown" (fn [e] (moving e)))
-    ;(.addEventListener #test "textInput" (fn [e] (mobileMoving e)))
-  ;)
   )
 
 (defn common-page []
@@ -103,11 +115,9 @@
      [common-head]
      [common-nav]
      [common-article]
-     [readMe]
      [keytest]
-       ;[:button {:on-click #(swap! coordinate update-in [:y] inc)} "Increment"]
+     [myFish]
      [myHero]
-       ;[:button {:on-click #(println (get @coordinate :x) (get @coordinate :y))} "Print"]
      [common-footer]
      [:div (addEvent)]]))
 
