@@ -9,6 +9,18 @@
 
 (def coordinate (reagent/atom {:x 50 :y 300}))
 (def fish-coordinate (reagent/atom {:x (rand-int 500) :y (rand-int 500) :status 1}))
+(def moveSpeed (reagent/atom 1))
+
+(defn moveInc [x]
+  (+ x @moveSpeed))
+(defn moveDec [x]
+  (- x @moveSpeed))
+
+(defn moveSpeedButton []
+  [:div
+   [:input {:type "button" :value "x1.0" :on-click #(reset! moveSpeed 1)}]
+   [:input {:type "button" :value "x2.0" :on-click #(reset! moveSpeed 2)}]
+   [:input {:type "button" :value "x4.0" :on-click #(reset! moveSpeed 4)}]])
 
 (defn common-head []
   [:h1 "Moving Cat"])
@@ -57,7 +69,7 @@
         hy (+ (get @coordinate :y) 60)
         cx (+ (get @fish-coordinate :x) 20)
         cy (+ (get @fish-coordinate :y) 20)]
-    (if (and (> 40 (- hx cx)) (< -5 (- hx cx)) (> 20 (- hy cy)) (< -20 (- hy cy)))
+    (if (and (> 50 (- hx cx)) (< -15 (- hx cx)) (> 30 (- hy cy)) (< -30 (- hy cy)))
   (if (= (get @fish-coordinate :status) 1)
     (do
       (swap! fish-coordinate assoc :status 2)
@@ -70,19 +82,19 @@
 (defn moving [e]
   (println (.-key e))
   (cond
-    (= (.-key e) "ArrowUp") (swap! coordinate update-in [:y] dec)
-    (= (.-key e) "ArrowDown") (swap! coordinate update-in [:y] inc)
-    (= (.-key e) "ArrowLeft") (swap! coordinate update-in [:x] dec)
-    (= (.-key e) "ArrowRight") (swap! coordinate update-in [:x] inc)
-    (= (.-key e) "w") (swap! coordinate update-in [:y] dec)
-    (= (.-key e) "s") (swap! coordinate update-in [:y] inc)
-    (= (.-key e) "a") (swap! coordinate update-in [:x] dec)
-    (= (.-key e) "d") (swap! coordinate update-in [:x] inc)
+    (= (.-key e) "ArrowUp") (swap! coordinate update-in [:y] moveDec)
+    (= (.-key e) "ArrowDown") (swap! coordinate update-in [:y] moveInc)
+    (= (.-key e) "ArrowLeft") (swap! coordinate update-in [:x] moveDec)
+    (= (.-key e) "ArrowRight") (swap! coordinate update-in [:x] moveInc)
+    (= (.-key e) "w") (swap! coordinate update-in [:y] moveDec)
+    (= (.-key e) "s") (swap! coordinate update-in [:y] moveInc)
+    (= (.-key e) "a") (swap! coordinate update-in [:x] moveDec)
+    (= (.-key e) "d") (swap! coordinate update-in [:x] moveInc)
     (= (.-key e) "c") (capture)
-    (= e "w") (swap! coordinate update-in [:y] dec)
-    (= e "s") (swap! coordinate update-in [:y] inc)
-    (= e "a") (swap! coordinate update-in [:x] dec)
-    (= e "d") (swap! coordinate update-in [:x] inc)
+    (= e "w") (swap! coordinate update-in [:y] moveDec)
+    (= e "s") (swap! coordinate update-in [:y] moveInc)
+    (= e "a") (swap! coordinate update-in [:x] moveDec)
+    (= e "d") (swap! coordinate update-in [:x] moveInc)
     (= e "c") (capture)
     ;:else (.alert js/window (.-key e))
     ;:else (.alert js/window (.-which e))
@@ -110,6 +122,7 @@
   (.addEventListener js/window "keydown" (fn [e] (moving e)))
   )
 
+
 (defn common-page []
   (fn []
     [:div
@@ -119,6 +132,7 @@
      [keytest]
      [myFish]
      [myHero]
+     [moveSpeedButton]
      [common-footer]
      [:div (addEvent)]]))
 
