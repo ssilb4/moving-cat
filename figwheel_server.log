@@ -5107,3 +5107,24 @@ notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tut
 Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
 [32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.655 seconds.[0m
 notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.486 seconds.[0m
+[36m----  Could not Read  src/cljs/reagent_tutorial/core.cljs   line:15 ----[0m
+
+  [1m/home/himchan/Project/moving-cat/src/cljs/reagent_tutorial/core.cljs [line 15, col 21] Unmatched delimiter ).[0m
+
+  [36m14[0m  [36m(defn moveInc [x][0m
+  [33m15[0m  [1m  (+ x @moveSpeed)))[0m
+  [0m  [0m  [33m  /home/himchan/Project/moving-cat/src/cljs/reagent_tutorial/core.cljs [line 15, col 21] Unmatched delimiter ).[0m
+  [36m16[0m  [36m(defn moveDec [x][0m
+  [36m17[0m  [36m  (- x @moveSpeed)))[0m
+
+[36m----  Reader Error : Please see src/cljs/reagent_tutorial/core.cljs  ----[0m
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.192 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.696 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/reagent_tutorial/core.js
