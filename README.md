@@ -1,6 +1,6 @@
-#Moving-Cat
+# Moving-Cat
 
-##It is a my small project with cljs(reagent)
+## It is a my small project with cljs(reagent)
 
-##run: lein figwheel
+## run: lein figwheel
 
